@@ -6,29 +6,20 @@ import { Link } from "react-router-dom";
 import "swiper/css";
 import "swiper/css/pagination";
 
-// Example pest control images (replace with actual images)
-import pest1 from "../assets/home/h6.jpg";
-import pest2 from "../assets/service/RODENT.jpeg";
-import pest3 from "../assets/service/pipe.jpeg";
-import pest4 from "../assets/service/mos.jpeg";
-import pest5 from "../assets/service/ant.jpeg";
-import pest6 from "../assets/service/bed.jpeg";
-import pest7 from "../assets/service/garden.jpeg";
-import pest8 from "../assets/service/foging.jpeg";
-import pest9 from "../assets/service/san.jpeg";
+
+import pest1 from "../assets/water/fresh.avif";
+import pest2 from "../assets/water/stp.avif";
+import pest3 from "../assets/water/rain.webp";
+import pest4 from "../assets/water/disel.avif";
+
 const services = [
-  { title: "General Pest Control Treatment", slug: "general-pest-control", image: pest1 },
-  { title: "Rodent Control Services", slug: "rodent-control", image: pest2 },
-  { title: "Piping System Termite Treatment", slug: "termite-treatment", image: pest3 },
-  { title: "Mosquitoes Control Services", slug: "mosquito-control", image: pest4 },
-  { title: "Ants Control Services", slug: "ants-control", image: pest5 },
-  { title: "Bed Bugs Treatment", slug: "bed-bugs-treatment", image: pest6 },
-  { title: "Garden Treatment Services", slug: "garden-treatment", image: pest7 },
-  { title: "Fogging", slug: "fogging", image: pest8 },
-  { title: "Sanitisation", slug: "sanitisation", image: pest9 },
+  { title: "Fresh WaterTank Cleaning Service", slug: "fresh-tank", image: pest1 },
+  { title: "STP Tank Cleaning Service", slug: "stp-tank", image: pest2 },
+  { title: "Rainwater Harvesting Tank Cleaning Solution", slug: "rain-harvesting", image: pest3 },
+  { title: "Diesel Tank Cleaning Service", slug: "diesel-tank", image: pest4 },
 ];
 
-export default function ServicesSection() {
+export default function TankService() {
   return (
     <section className="relative bg-[#0B1D16] font-[poppins] py-10 overflow-hidden">
      
@@ -37,11 +28,11 @@ export default function ServicesSection() {
         {/* Section Heading */}
         <div className="text-center max-w-3xl mx-auto mb-16 relative z-10">
           <h2 className="font-cursive1 text-5xl md:text-6xl text-[#3CB371] tracking-wide">
-            Our Premium <span className="text-[#FFFFFF]">Services</span>
+            Our Water Tank Cleaning <span className="text-[#FFFFFF]">Services</span>
           </h2>
           <p className="mt-2 font-body text-[#F5F5F5] leading-relaxed text-base md:text-md">
             At <span className="text-[#3CB371]">Neat & Clean Pest Control</span>, we provide
-            effective and eco-friendly pest control solutions for your home, office, and outdoor spaces.
+            effective and eco-friendly pest control and water tank solutions for your home, office, and outdoor spaces.
             Our services are tailored to ensure safety, hygiene, and complete peace of mind.
           </p>
         </div>
@@ -62,7 +53,7 @@ export default function ServicesSection() {
         >
           {services.map((service, index) => (
             <SwiperSlide key={index}>
-              <Link to={`/services/${service.slug}`}>
+              <Link to={`/watertank/${service.slug}`}>
                 <div className="relative rounded-2xl overflow-hidden group shadow-xl bg-black/20">
                   <img
                     src={service.image}

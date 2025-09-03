@@ -107,7 +107,7 @@ const FAQ = () => {
       style={{ backgroundImage: `url(${bgImage})` }}
     >
       {/* Green overlay for premium look */}
-      <div className="absolute inset-0 bg-[#ffffffdd] z-0" />
+      <div className="absolute inset-0 bg-black/5 z-0" />
 
       {/* FAQ Container */}
       <div className="relative max-w-7xl mx-auto rounded-3xl shadow-lg bg-transparent z-10 ">

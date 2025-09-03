@@ -9,6 +9,8 @@ import {
   FaInfoCircle,
   FaBug,
   FaCertificate,
+  FaProductHunt,
+  FaContao,
 } from "react-icons/fa";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -101,7 +103,10 @@ export default function Footer() {
               ["Home", "/", <FaHome />],
               ["About Us", "/about", <FaInfoCircle />],
               ["Services", "/services", <FaBug />],
+                 ["Contact Us", "/contact", <FaContao />],
               ["Water Tank Cleaning", "/watertank", <FaCertificate />],
+              ["Our Products", "/product", <FaProductHunt />],
+              ["Certificates", "/certificates", <FaCertificate />],
             ].map(([text, link, icon], i) => (
               <li key={i}>
                 <Link

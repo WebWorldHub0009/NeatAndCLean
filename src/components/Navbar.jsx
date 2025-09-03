@@ -18,10 +18,13 @@ import {
   FaReadme,
   FaEnvelopeOpen,
   FaWhatsapp,
+  FaProcedures,
+  FaRegHandPointDown,
+  
 } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { Link, useLocation } from "react-router-dom";
-// import logo from "../assets/images/neatclean-logo.png";
+import logo from "../assets/nlogo.png";
 
 const navItemsLeft = [
   { name: "Home", path: "/", icon: <FaHome className="inline mr-1" /> },
@@ -31,6 +34,7 @@ const navItemsLeft = [
 
 const navItemsRight = [
     { name: "Water Tank Cleaning", path: "/watertank", icon: <FaCertificate className="inline mr-1" /> },
+     { name: "Product", path: "/product", icon: <FaRegHandPointDown className="inline mr-1" /> },
   { name: "Contact Us", path: "/contact", icon: <FaPhoneAlt className="inline mr-1" /> },
 ];
 
@@ -81,7 +85,7 @@ const ModernNavbar = () => {
       </div>
 
       {/* Main Navbar */}
-      <nav className="w-full px-4 md:px-12 py-4 bg-white shadow-md relative z-50">
+      <nav className="w-full px-4 md:px-12 py-1 bg-white shadow-md relative z-50">
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           {/* Left Items */}
           <ul className="hidden md:flex gap-6 text-sm font-medium uppercase">
@@ -98,9 +102,9 @@ const ModernNavbar = () => {
           {/* Center Logo */}
           <Link to="/" className="flex justify-center items-center">
             <img
-              src={""} // TODO: replace with logo
+              src={logo} // TODO: replace with logo
               alt="Neat & Clean Pest Control Logo"
-              className="h-10 md:h-12 object-contain"
+              className="h-10 md:h-16 object-contain"
             />
           </Link>
 
@@ -167,7 +171,7 @@ const ModernNavbar = () => {
               >
                 {/* Mobile brand row */}
                 <div className="flex justify-between items-center">
-                  <img src={""} alt="Logo" className="h-7" />
+                  <img src={logo} alt="Logo" className="h-14" />
                   <FaTimes
                     className="text-xl text-[#1C1C1C] cursor-pointer"
                     onClick={toggleMenu}
